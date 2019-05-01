@@ -194,7 +194,7 @@ function setDisplayNameAfter(path, nameNodeId, t, displayName) {
     delete blockLevelStmnt.node.trailingComments;
 
     var setDisplayNameStmn = t.expressionStatement(
-      t.callExpression(t.identifier("register"), [
+      t.callExpression(t.identifier("__register__"), [
         nameNodeId,
         t.stringLiteral(
           displayName +

@@ -190,6 +190,14 @@ var Component5c = function () {
 register(Component5c, \\"Component5c-083999b6e366a7dfc59aa674a0bf2d85\\");"
 `;
 
+exports[`add-react-displayname transform transforms memolazy 1`] = `
+"const X = React.lazy(() => import(\\"something\\"));
+
+register(X, \\"X-fb41e68057cd9b28319447491ff88215\\");
+const Memoized = React.memo(() => React.createElement(\\"div\\", null));
+register(Memoized, \\"Memoized-fb41e68057cd9b28319447491ff88215\\");"
+`;
+
 exports[`add-react-displayname transform transforms passThrough 1`] = `
 "// ---------------------
 // Should pass through unaltered

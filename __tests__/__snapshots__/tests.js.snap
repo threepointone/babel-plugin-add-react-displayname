@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add-react-displayname transform transforms arrowFun 1`] = `
+"// Stateless component with an arrow function
+var Component2 = ({ value }) => {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+};
+register(Component2, \\"Component2-fa2987c1fcfad8674d8adae3f5ecccf2\\");"
+`;
+
+exports[`add-react-displayname transform transforms classComponents 1`] = `
+"var _class, _temp;
+
+import React from 'react';
+import { Component } from 'react';
+
+export let Component3a = class Component3a extends React.Component {
+  render() {
+    return React.createElement('div', null);
+  }
+};
+
+register(Component3a, 'Component3a-c8e08a4285c6cf74c9e34eaadc1d2f84');
+let Component3b = class Component3b extends React.Component {
+  render() {
+    return React.createElement('div', null);
+  }
+};
+register(Component3b, 'Component3b-c8e08a4285c6cf74c9e34eaadc1d2f84');
+export { Component3b as default };
+
+
+export let Component3c = class Component3c extends Component {
+  render() {
+    return React.createElement('div', null);
+  }
+};
+
+register(Component3c, 'Component3c-c8e08a4285c6cf74c9e34eaadc1d2f84');
+let Component3d = (_temp = _class = class Component3d extends Component {
+  render() {
+    return React.createElement('div', null);
+  }
+}, _class.get = () => {
+  return React.createElement('div', null);
+}, _temp);
+register(Component3d, 'Component3d-c8e08a4285c6cf74c9e34eaadc1d2f84');"
+`;
+
+exports[`add-react-displayname transform transforms createClass 1`] = `
+"import React from 'react';
+import { Component } from 'react';
+
+// Babel already sets displayName for this one
+export var Component0 = React.createClass({
+  displayName: 'Component0',
+
+  render: function () {
+    React.createElement('div', null);
+  }
+});"
+`;
+
+exports[`add-react-displayname transform transforms decorators 1`] = `
+"var _dec, _class;
+
+import React from 'react';
+import { Component } from 'react';
+import connect from '../decorators/connect';
+
+let DecoratedComponent = (_dec = connect(Component), _dec(_class = class DecoratedComponent extends React.Component {
+  render() {
+    return React.createElement('div', null);
+  }
+}) || _class);
+register(DecoratedComponent, 'DecoratedComponent-50f34a4ba33834d901421a207244fcf3');
+export { DecoratedComponent as default };"
+`;
+
+exports[`add-react-displayname transform transforms emptyReturn 1`] = `
+"// Arrow function with empty return
+var emptyReturnFunction = () => {
+  return;
+};"
+`;
+
+exports[`add-react-displayname transform transforms exportDefaultAnon 1`] = `
+"// Exported default stateless component used in variable declaration
+export default function _uid({ value }) {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+}
+register(_uid, \\"input-940090b6f01fe23d3506ea3839c34fe4\\");"
+`;
+
+exports[`add-react-displayname transform transforms functionExpr 1`] = `
+"// Exported stateless componenet
+export function Component1a(value) {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+}
+
+register(Component1a, \\"Component1a-3ed22ad048cef192e888ce0448ba2a23\\");
+// Stateless componenet
+function Component1b(value) {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+}
+
+register(Component1b, \\"Component1b-3ed22ad048cef192e888ce0448ba2a23\\");
+// Stateless componenet used in a variable declaration
+var Component1c = function (value) {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+};
+
+register(Component1c, \\"Component1c-3ed22ad048cef192e888ce0448ba2a23\\");
+// Exported named stateless component used in variable declaration
+export var Component1d = function (value) {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+};
+
+register(Component1d, \\"Component1d-3ed22ad048cef192e888ce0448ba2a23\\");
+// Stateless componenet used in an assignment
+var Component1e;
+Component1e = function (value) {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+};
+
+register(Component1e, \\"Component1e-3ed22ad048cef192e888ce0448ba2a23\\");
+// Exported default stateless *named* component used in variable declaration
+export default function Component1f(value) {
+  return React.createElement(
+    \\"div\\",
+    null,
+    value
+  );
+}
+register(Component1f, \\"Component1f-3ed22ad048cef192e888ce0448ba2a23\\");"
+`;
+
+exports[`add-react-displayname transform transforms hooks 1`] = `
+"export function useA() {
+  return useState(null);
+}
+register(useA, \\"useA-3b026ba19c66f90181dd8ff47e7ccb1f\\");"
+`;
+
+exports[`add-react-displayname transform transforms knownComponents 1`] = `
+"// Specifically configured to set name on Component5a and Component5b
+function Component5a() {
+  return \\"some string\\";
+}
+
+register(Component5a, \\"Component5a-083999b6e366a7dfc59aa674a0bf2d85\\");
+var Component5b = function () {
+  return \\"some string\\";
+};
+
+register(Component5b, \\"Component5b-083999b6e366a7dfc59aa674a0bf2d85\\");
+// Known component's name used inside another function
+var Component5c = function () {
+  function Component5c() {}
+  return Component5c;
+}();
+register(Component5c, \\"Component5c-083999b6e366a7dfc59aa674a0bf2d85\\");"
+`;
+
+exports[`add-react-displayname transform transforms passThrough 1`] = `
+"// ---------------------
+// Should pass through unaltered
+// ---------------------
+var f1 = function ({ value }) {
+  return \\"somestring\\";
+};
+
+function f2({ value }) {
+  return \\"somestring\\";
+}
+
+let f3 = class f3 {
+  method1() {
+    return \\"whatever\\";
+  }
+};
+
+
+var f4 = React.createElement(
+  \\"div\\",
+  null,
+  (() => React.createElement(\\"span\\", null))()
+);
+
+// Known component which doesn't sit directly on the \`Program\` node get left alone
+{
+  var Component5c = function () {
+    function Component5c() {}
+    return Component5c;
+  }();
+}
+
+// ---------------------
+// Not supported
+// ---------------------
+
+// High-order things will be hard to catch
+var jsxChunk = React.createElement(
+  \\"div\\",
+  null,
+  value
+);
+function UnsupportedComponent1({ value }) {
+  return function () {
+    return jsxChunk;
+  };
+}
+
+register(UnsupportedComponent1, \\"UnsupportedComponent1-05c533f6b22d799d5e6b9517c31ca97d\\");
+var a = {
+  smoke: function () {},
+  Component1d: function ({ value }) {
+    return React.createElement(
+      \\"div\\",
+      null,
+      value
+    );
+  }
+};
+
+var external = function () {
+  var internal = function () {
+    return React.createElement(\\"div\\", null);
+  };
+  return internal;
+};"
+`;

@@ -13,10 +13,12 @@ describe('add-react-displayname transform', function() {
 
   fs.readdirSync(fixturesDir).forEach(function (fixture) {
     var actual = transformFile(path.join(fixturesDir, fixture, 'input.js'))
-    var expected = readFile((path.join(fixturesDir, fixture, 'expected.js')))
+
+    // var expected = readFile((path.join(fixturesDir, fixture, 'expected.js')))
 
     it('transforms ' + path.basename(fixture), function() {
-      assert.equal(actual, expected)
+      expect(actual).toMatchSnapshot()
+      // assert.equal(actual, expected)
     })
   })
 });
